@@ -5,10 +5,12 @@ ENV JIRA_HOME     /var/atlassian/jira
 ENV JIRA_INSTALL  /opt/atlassian/jira
 ENV JIRA_VERSION  7.11.0
 
+ENV TZ Europe/Zurich
+
 # Install Atlassian JIRA and helper tools and setup initial home
 # directory structure.
 RUN set -x \
-    && apk add --no-cache curl xmlstarlet bash ttf-dejavu libc6-compat \
+    && apk add --no-cache curl xmlstarlet bash ttf-dejavu libc6-compat tzdata \
     && mkdir -p                "${JIRA_HOME}" \
     && mkdir -p                "${JIRA_HOME}/caches/indexes" \
     && chmod -R 700            "${JIRA_HOME}" \
