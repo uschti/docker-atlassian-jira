@@ -1,6 +1,6 @@
-[![CircleCI Build Status](https://img.shields.io/circleci/project/cptactionhank/docker-atlassian-jira/master.svg?label=CircleCI)](https://circleci.com/gh/cptactionhank/docker-atlassian-jira) [![Open Issues](https://img.shields.io/github/issues/cptactionhank/docker-atlassian-jira.svg)](https://github.com/cptactionhank/docker-atlassian-jira/issues) [![Stars on GitHub](https://img.shields.io/github/stars/cptactionhank/docker-atlassian-jira.svg)](https://github.com/cptactionhank/docker-atlassian-jira/stargazers) [![Forks on GitHub](https://img.shields.io/github/forks/cptactionhank/docker-atlassian-jira.svg)](https://github.com/cptactionhank/docker-atlassian-jira/network) [![Stars on Docker Hub](https://img.shields.io/docker/stars/cptactionhank/atlassian-jira.svg)](https://hub.docker.com/r/cptactionhank/atlassian-jira/) [![Pulls on Docker Hub](https://img.shields.io/docker/pulls/cptactionhank/atlassian-jira.svg)](https://hub.docker.com/r/cptactionhank/atlassian-jira/) [![Sponsor by PayPal](https://img.shields.io/badge/sponsor-PayPal-blue.svg)](https://paypal.me/cptactionhank/5)
+[![CircleCI Build Status](https://img.shields.io/circleci/project/uschti/docker-atlassian-jira/master.svg?label=CircleCI)](https://circleci.com/gh/uschti/docker-atlassian-jira) [![Open Issues](https://img.shields.io/github/issues/uschti/docker-atlassian-jira.svg)](https://github.com/uschti/docker-atlassian-jira/issues) [![Stars on GitHub](https://img.shields.io/github/stars/uschti/docker-atlassian-jira.svg)](https://github.com/uschti/docker-atlassian-jira/stargazers) [![Forks on GitHub](https://img.shields.io/github/forks/uschti/docker-atlassian-jira.svg)](https://github.com/uschti/docker-atlassian-jira/network) [![Stars on Docker Hub](https://img.shields.io/docker/stars/uschti/atlassian-jira.svg)](https://hub.docker.com/r/uschti/atlassian-jira/) [![Pulls on Docker Hub](https://img.shields.io/docker/pulls/uschti/atlassian-jira.svg)](https://hub.docker.com/r/uschti/atlassian-jira/)
 
-> HEADS UP! The `latest` tag and versions above 7.7.1 will be switching to use Alpine versions of OpenJDK as the base image. Major change is the daemon users uid has changed from `1` to `2`.
+> HEADS UP! The `latest` tag, the `7.3.8-alpine` and versions above 7.7.1 will be switching to use Alpine versions of OpenJDK as the base image. Major change is the daemon users uid has changed from `1` to `2`.
 
 # Atlassian JIRA Core in a Docker container
 
@@ -17,7 +17,7 @@ If you want to help out, you can check out the contribution section further down
 
 To quickly get started running a JIRA Core instance, use the following command:
 ```bash
-docker run --detach --publish 8080:8080 cptactionhank/atlassian-jira:latest
+docker run --detach --publish 8080:8080 uschti/atlassian-jira:latest
 ```
 
 Then simply navigate your preferred browser to `http://[dockerhost]:8080` and finish the configuration.
@@ -43,6 +43,6 @@ Travis CI has additionally been configured to automatically deploy new version b
 
 If you see out of date documentation, lack of tests, etc., you can help out by either
 - creating an issue and opening a discussion, or
-- sending a pull request with modifications (remember to read [contributing guide](https://github.com/cptactionhank/docker-atlassian-jira/blob/master/CONTRIBUTING.md) before.)
+- sending a pull request with modifications (remember to read [contributing guide](https://github.com/uschti/docker-atlassian-jira/blob/master/CONTRIBUTING.md) before.)
 
 Continuous Integration and Continuous Delivery is made possible with the great services from [GitHub](https://github.com), [Travis CI](https://travis-ci.org/), and [CircleCI](https://circleci.com/) written in [Ruby](https://www.ruby-lang.org/), using [RSpec](http://rspec.info/), [Capybara](http://teamcapybara.github.io/capybara/), and [PhantomJS](http://phantomjs.org/) frameworks.
