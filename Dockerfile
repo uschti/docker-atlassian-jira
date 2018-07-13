@@ -5,6 +5,8 @@ ENV JIRA_HOME     /var/atlassian/jira
 ENV JIRA_INSTALL  /opt/atlassian/jira
 ENV JIRA_VERSION  7.11.0
 
+ENV JIRA_CONTEXT_PATH /
+
 ENV TZ Europe/Zurich
 
 # Install Atlassian JIRA and helper tools and setup initial home

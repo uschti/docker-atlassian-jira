@@ -20,6 +20,10 @@ if [ "$(stat -c "%Y" "${JIRA_INSTALL}/conf/server.xml")" -eq "0" ]; then
   if [ -n "${X_PATH}" ]; then
     xmlstarlet ed --inplace --pf --ps --update '//Context/@path' --value "${X_PATH}" "${JIRA_INSTALL}/conf/server.xml"
   fi
+  ## Update the Application Context based on the JIRA_CONTEXT_PATH ENV VAR
+  if [ -n "${JIRA_CONTEXT_PATH}" ]; then
+    xmlstarlet ed --inplace --pf --ps --update '//Context/@path' --value "${JIRA_CONTEXT_PATH}" "${JIRA_INSTALL}/conf/server.xml"
+  fi
 fi
 
 exec "$@"
